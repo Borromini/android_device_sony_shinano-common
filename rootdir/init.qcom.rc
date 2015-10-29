@@ -512,6 +512,7 @@ service mpdecision /system/vendor/bin/mpdecision --avg_comp
     class main
     user root
     group root readproc
+    socket mpdecision stream 0660 root system
     disabled
 
 # brcm-uim-sysfs (BT/FM/ANT+)
