@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
         libsonycamera
 
 PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/sbin/wait4tad_static:root/sbin/wait4tad_static \
     $(COMMON_PATH)/rootdir/sbin/tad_static:root/sbin/tad_static
 
 PRODUCT_COPY_FILES += \
