@@ -64,6 +64,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     tfa9890_amp
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+   libbt-vendor
+
 # Assertive Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ad_calib.cfg:system/etc/ad_calib.cfg
