@@ -51,7 +51,7 @@ on boot
     chown media system /sys/class/misc/pm8941-flash/device/strobe
     chown media system /sys/class/misc/pm8941-flash/device/vph_pwr_droop
 
-on post-fs
+on post-fs-data
      # we will remap this as /mnt/sdcard with the sdcard fuse tool
      mkdir /data/misc/camera 0770 camera camera
      mkdir /data/misc/cameraserver 0700 cameraserver cameraserver
