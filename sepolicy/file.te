@@ -10,3 +10,5 @@ type brcm_uim_exec, exec_type, file_type;
 # Macaddr
 type sysfs_addrsetup, fs_type, sysfs_type;
 
+# /sys
+type sysfs_glove_mode, fs_type, sysfs_type;
