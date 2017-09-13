@@ -94,10 +94,10 @@ PRODUCT_PACKAGES += \
     e2fsck
 
 # FM
-PRODUCT_PACKAGES += \
-   FMRadio \
-   brcm-uim-sysfs \
-   libfmradio.v4l2-fm
+#PRODUCT_PACKAGES += \
+#   FMRadio \
+#   brcm-uim-sysfs \
+#   libfmradio.v4l2-fm
 
 # GPS
 PRODUCT_COPY_FILES += \
