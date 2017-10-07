@@ -22,6 +22,7 @@ on init
 :/system/bin/suntrold|libshims_signal.so \
 :/system/lib/hw/camera.qcom.so|libsonycamera.so \
 :/system/vendor/lib/libwvm.so|libdtcpipplayer.so \
+:/system/bin/mm-qcamera-daemon|libandroid.so \
 "
 
 on early-fs
