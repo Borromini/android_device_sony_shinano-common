@@ -11,3 +11,5 @@ allow uim rootfs:lnk_file getattr;
 allow uim ta_data_file:dir search;
 allow uim bluetooth_prop:sock_file write;
 allow uim ta_data_file:file r_file_perms;
+
+allowxperm uim hci_attach_dev:chr_file ioctl uim_sock_ipc_ioctls;
