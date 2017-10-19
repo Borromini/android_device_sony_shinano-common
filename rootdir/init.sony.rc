@@ -20,4 +20,4 @@ on-post-fs-data
 service iddd /system/bin/iddd
     class main
     user oem_5987
-    group oem_5987 log inet oem_5993
+    group oem_5987 log inet oem_5993 cameraserver media

@@ -71,10 +71,10 @@ on post-fs-data
     mkdir /data/persist/wv 0700 system system
 
     # SONY: Camera
-    mkdir /data/camera 0770 media camera
-    chown media camera /sys/devices/sony_camera_0/info
+    mkdir /data/camera 0770 media cameraserver
+    chown media cameraserver /sys/devices/sony_camera_0/info
     chmod 0770 /sys/devices/sony_camera_0/info
-    chown media camera /sys/devices/sony_camera_1/info
+    chown media cameraserver /sys/devices/sony_camera_1/info
     chmod 0770 /sys/devices/sony_camera_1/info
 
     # SONY: Import MiscTA to System properties
@@ -107,8 +107,8 @@ start credmgrd
 # Start Credential manager daemon
 service credmgrd /system/bin/credmgrd
     user system
-    group oem_5996
-    socket credmgr stream 0660 system oem_5996
+    group oem_5996 cameraserver media
+    socket credmgr stream 0660 system cameraserver
     disabled
 
 # Secure Config Transfer service
@@ -143,9 +143,8 @@ on property:sys.listeners.registered=true
 #service qcamerasvr /system/bin/logwrapper /system/bin/mm-qcamera-daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
-    user camera
-#    group camera system inet input graphics
-    group camera system inet input graphics oem_5996 cameraserver
+    user cameraserver
+    group system inet input graphics oem_5996 cameraserver media
 #    seclabel u:r:mm-qcamerad:s0
 
 # SONY: TrimArea Daemon
@@ -154,7 +153,7 @@ service tad_static /sbin/tad_static /dev/block/bootdevice/by-name/TA 0,16
 #service tad_static /sbin/tad_static /data/credmgr/ta_part.bin 0,16
     class trimarea
     user oem_5997
-    group oem_5997 oem_5993 root
+    group oem_5997 oem_5993 root cameraserver media
     socket tad stream 0770 system oem_5993
 # tad_static is in rootfs, normal file_context does not work
     seclabel u:r:tad:s0
