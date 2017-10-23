@@ -92,8 +92,8 @@ service taimport /system/bin/taimport
 # This script init /cache/CredentialManagerData if /data/credmgr doesn't meet our requirements
 service initcredmgr /system/bin/credmgrfirstboot.sh
     class late_start
-    user system
-    group cameraserver
+    user root
+    group root
     oneshot
 
 # When credmgrfirstboot is ready it set sys.credmgrdready=true.
