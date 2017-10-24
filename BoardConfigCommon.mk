@@ -59,9 +59,6 @@ BOARD_CUSTOM_BT_CONFIG := device/sony/shinano-common/bluetooth/vnd_shinano.txt
 # Camera
 TARGET_USES_MEDIA_EXTENSIONS := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += device/sony/shinano-common/cmhw
-
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
 
