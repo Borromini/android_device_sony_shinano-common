@@ -38,7 +38,7 @@ ro.qti.sensors.dpc=false
 ro.qti.sensors.wu=false
 
 # BT rfkill
-ro.rfkilldisabled.uim=1
+ro.rfkilldisabled=1
 
 # BT AptX
 persist.bt.enableAptXHD=true
