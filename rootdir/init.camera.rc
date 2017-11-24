@@ -20,12 +20,13 @@ on init
 :/system/vendor/bin/credmgrd|libshims_signal.so \
 :/system/vendor/bin/iddd|libshims_idd.so \
 :/system/vendor/bin/suntrold|libshims_signal.so \
+:/system/lib/hw/camera.vendor.qcom.so|/system/vendor/lib/libsonycamera.so \
 :/system/lib/hw/camera.qcom.so|libsonycamera.so \
 :/system/vendor/lib/libwvm.so|libdtcpipplayer.so \
 :/system/vendor/bin/mm-qcamera-daemon|libandroid.so \
 :/system/lib/libcammw.so|libsensor.so \
 :/system/lib/libsomc_chokoballpal.so|libGraphicBuffer.so \
-:/system/lib/hw/camera.qcom.so|libsensor.so \
+:/system/lib/hw/camera.vendor.qcom.so|libsensor.so \
 "
 
 on early-fs
