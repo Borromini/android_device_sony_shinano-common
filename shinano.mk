@@ -62,7 +62,7 @@ RODUCT_PACKAGES += \
     wait4tad_static
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/bin/credmgrfirstboot.sh:system/bin/credmgrfirstboot.sh
+    $(COMMON_PATH)/rootdir/system/vendor/bin/credmgrfirstboot.sh:system/vendor/bin/credmgrfirstboot.sh
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -141,7 +141,7 @@ PRODUCT_PACKAGES += \
 
 # Sensor file
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/etc/init.qcom-sensor.sh:system/etc/init.qcom-sensor.sh 
+    $(COMMON_PATH)/rootdir/system/vendor/bin/init.qcom-sensor.sh:system/vendor/bin/init.qcom-sensor.sh
 
 # BCM Wifi
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
