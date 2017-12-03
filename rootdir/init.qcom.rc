@@ -484,11 +484,6 @@ service qcom-sensor-sh /system/etc/init.qcom-sensor.sh
     user root
     oneshot
 
-service time_daemon /system/bin/time_daemon
-    class late_start
-    user root
-    group root
-
 # HexagonDSP FastRPC daemon
 service adsprpcd /system/vendor/bin/adsprpcd
    class main
