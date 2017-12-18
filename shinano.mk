@@ -72,13 +72,6 @@ RODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/vendor/bin/credmgrfirstboot.sh:system/vendor/bin/credmgrfirstboot.sh
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
-
-PRODUCT_PACKAGES += \
-    tfa9890_amp
-
 # Bluetooth
 PRODUCT_PACKAGES += \
    libbt-vendor
