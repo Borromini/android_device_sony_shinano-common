@@ -53,6 +53,7 @@
                 <item>Speaker</item>
                 <item>Telephony Tx</item>
                 <item>Built-In Mic</item>
+                <item>Built-In Back Mic</item>
                 <item>FM Tuner</item>
                 <item>Telephony Rx</item>
             </attachedDevices>
@@ -151,6 +152,11 @@
                              samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </devicePort>
+                <devicePort tagName="Built-In Back Mic" type="AUDIO_DEVICE_IN_BACK_MIC" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
+                </devicePort>
                 <devicePort tagName="FM Tuner" type="AUDIO_DEVICE_IN_FM_TUNER" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000"
@@ -173,13 +179,13 @@
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
                 <route type="mix" sink="Earpiece"
-                       sources="primary output,deep_buffer,voip_rx"/>
+                       sources="primary output,deep_buffer,voip_rx,BT SCO Headset Mic"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,deep_buffer,voip_rx"/>
+                       sources="primary output,deep_buffer,voip_rx,BT SCO Headset Mic,Telephony Rx"/>
                 <route type="mix" sink="Wired Headset"
-                       sources="primary output,deep_buffer,voip_rx"/>
+                       sources="primary output,deep_buffer,voip_rx,BT SCO Headset Mic,Telephony Rx"/>
                 <route type="mix" sink="Wired Headphones"
-                       sources="primary output,deep_buffer,voip_rx"/>
+                       sources="primary output,deep_buffer,voip_rx,BT SCO Headset Mic,Telephony Rx"/>
                 <route type="mix" sink="Line"
                        sources="primary output,deep_buffer,voip_rx"/>
                 <route type="mix" sink="HDMI"
@@ -193,7 +199,7 @@
                 <route type="mix" sink="Telephony Tx"
                        sources="voice_tx"/>
                 <route type="mix" sink="primary input"
-                       sources="Built-In Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx"/>
+                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx"/>
                 <route type="mix" sink="voice_rx"
                        sources="Telephony Rx"/>
             </routes>
