@@ -458,12 +458,6 @@ service mlog_qmi_service /system/vendor/bin/mlog_qmi_service
     class late_start
     user root
 
-# Thermal Manager service
-service thermanager /system/vendor/bin/thermanager /system/etc/thermanager.xml
-    class main
-    user root
-    group root
-
 service irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
     class main
     user root
@@ -535,16 +529,8 @@ service mpdecision /system/vendor/bin/mpdecision --avg_comp
     disabled
 
 # brcm-uim-sysfs (BT/FM/ANT+)
- service uim /system/bin/brcm-uim-sysfs
+service uim /system/bin/brcm-uim-sysfs
     class late_start
     user root
     group bluetooth net_bt
     seclabel u:r:uim:s0
-
-# OSS time
-service timekeep /system/vendor/bin/timekeep restore
-    class late_start
-    user root
-    group root
-    oneshot
-    writepid /dev/cpuset/system-background/tasks
