@@ -392,12 +392,6 @@ service qmuxd /system/vendor/bin/qmuxd
     user radio
     group radio audio bluetooth gps nfc diag wakelock
 
-# Wi-Fi and BT MAC addresses
-service macaddrsetup /system/vendor/bin/macaddrsetup /sys/devices/platform/bcmdhd_wlan/macaddr
-    class late_start
-    user root
-    oneshot
-
 service netmgrd /system/vendor/bin/netmgrd
     class late_start
     user root

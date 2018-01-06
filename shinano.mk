@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.qcom.power.rc:root/init.qcom.power.rc \
     $(COMMON_PATH)/rootdir/init.sony.usb.rc:root/init.sony.usb.rc \
     $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    $(COMMON_PATH)/rootdir/system/vendor/etc/init/macaddrsetup.rc:system/vendor/etc/init/macaddrsetup.rc \
     hardware/sony/thermanager/vendor/etc/init/thermanager.rc:system/vendor/etc/init/thermanager.rc \
     hardware/sony/timekeep/vendor/etc/init/timekeep.rc:system/vendor/etc/init/timekeep.rc
 
