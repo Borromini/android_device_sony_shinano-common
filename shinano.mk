@@ -17,6 +17,11 @@ $(call inherit-product, device/sony/msm8974-common/msm8974.mk)
 
 COMMON_PATH := device/sony/shinano-common
 
+# Include HW subsystem-specific makefiles
+-include $(LOCAL_PATH)/hardware/*/packages.mk
+-include $(LOCAL_PATH)/hardware/*/copy.mk
+-include $(LOCAL_PATH)/hardware/*/prop.mk
+
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # Permissions

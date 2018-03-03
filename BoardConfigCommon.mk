@@ -17,7 +17,9 @@ include device/sony/msm8974-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/shinano-common/include
 
-# Platform
+BOARD_PATH := device/sony/shinano-common
+
+# Board
 BOARD_VENDOR_PLATFORM := shinano
 PRODUCT_PLATFORM:= shinano
 
@@ -30,6 +32,9 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_DTB_EXTRA_FLAGS := --force-v2
+
+# Defines for HW subsystems
+-include $(BOARD_PATH)/hardware/*/BoardConfig.mk
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
