@@ -490,6 +490,9 @@ service adsprpcd /system/bin/adsprpcd
 
 service charger /charger
     class charger
+    user root
+    group root radio system
+    seclabel u:r:charger:s0
 
 service audiod /system/bin/audiod
     class late_start
