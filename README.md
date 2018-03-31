@@ -1,4 +1,4 @@
-Copyright 2013 - The CyanogenMod Project
+Copyright 2013 - The CyanogenMod Project  
 Copyright 2017 - The LineageOS Project
 ================================
 
@@ -25,6 +25,7 @@ Depend on (Sony specific):
 
 | version | kernel version                        |
 |---------|---------------------------------------|
+| 15.1    | LineageOS/android_kernel_sony_msm8974 |
 | 14.1    | LineageOS/android_kernel_sony_msm8974 |
 | 13      | LineageOS/android_kernel_sony_msm     |
 | 12.1    | LineageOS/android_kernel_sony_msm8974 |
