@@ -265,7 +265,7 @@ on boot
     chown system system /sys/devices/virtual/graphics/fb0/rgb
     chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
 
-on post-fs
+on post-fs-data
     # Change to socket location on libkeyctrl/suntory for /data encryption
     # Create suntory data directory
     mkdir /dev/socket/suntory 0755 system system
