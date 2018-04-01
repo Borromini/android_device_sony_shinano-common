@@ -55,7 +55,7 @@ on boot
 
 on post-fs-data
      # we will remap this as /mnt/sdcard with the sdcard fuse tool
-     mkdir /data/misc/camera 0770 camera camera
+     mkdir /data/misc/camera 0770 media camera
      mkdir /data/misc/cameraserver 0700 cameraserver cameraserver
 
      # create directory for scd
