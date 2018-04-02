@@ -16,7 +16,6 @@
 
 on init
 	export LD_SHIM_LIBS " \
-/system/vendor/lib/libwvm.so|libshims_wvm.so \
 :/system/vendor/bin/credmgrd|libshims_signal.so \
 :/system/vendor/bin/iddd|libshims_idd.so \
 :/system/vendor/bin/suntrold|libshims_signal.so \
